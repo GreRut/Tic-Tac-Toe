@@ -3,9 +3,14 @@
 }
 
 body {
-  font-family: sans-serif;
-  margin: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
   padding: 0;
+  background-color: #F4F1DE;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
 }
 
 h1 {
@@ -46,29 +51,30 @@ ul {
   padding-inline-start: 20px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
-}
-
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background: #F2CC8F;
+  border: 3px solid #E07A5F;
   float: left;
-  font-size: 24px;
+  font-size: 48px;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
+  line-height: 70px;
+  height: 70px;
+  width: 70px;
+  margin-right: -2px;
+  margin-top: -2px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  border-radius: 12px;
+  color: #3D405B;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+.square:hover {
+  background: #E07A5F;
+  border: 3px solid #3D405B;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .board-row:after {
@@ -78,13 +84,63 @@ body {
 }
 
 .status {
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3D405B;
+  text-align: center;
 }
+
 .game {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.game-board {
+  margin-bottom: 20px;
 }
 
 .game-info {
-  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.game-info ul {
+  padding-left: 0;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.game-info li {
+  margin: 5px 0;
+}
+
+.game-info button {
+  background-color: #3D405B;
+  border: 2px solid #E07A5F;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.game-info button:hover {
+  background-color: #E07A5F;
+  border: 2px solid #3D405B;
+  transform: scale(1.05);
+}
+
+.game-info button:focus {
+  outline: none;
 }
